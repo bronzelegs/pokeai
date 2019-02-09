@@ -1,0 +1,31 @@
+{
+  "name": "tstore",
+  "version": "1.0.0",
+  "description": "simple mongo implementation of a triplestore.",
+  "main": "server.js",
+  "scripts": {
+    "test-init": "./node_modules/jasmine/bin/jasmine.js init",
+    "test": "./node_modules/jasmine/bin/jasmine.js"
+  },
+  "keywords": [
+    "Express",
+    "RestAPI",
+    "MongoDB",
+    "Mongoose",
+    "triples",
+    "triplestore"
+  ],
+  "author": "Terrance Davis",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "cors": "^2.8.4",
+    "express": "^4.16.2",
+    "jasmine": "^2.8.0",
+    "mongoose": "^5.4.10",
+    "morgan": "^1.9.1",
+    "request": "^2.88.0",
+    "rotating-file-stream": "^1.4.0"
+  },
+  "devDependencies": {}
+}
