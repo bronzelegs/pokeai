@@ -61,7 +61,7 @@ exports.findOne = function (req, res) {
     // Find a single thread with a threadId
     // console.log(req.params.threadId);
     Thread.findById({_id: req.params.threadId}, function (err, thread) {
-        console.log();
+        //console.log();
         if (err || !thread) {
             res.status(500).send({
                 message: "Could not retrieve thread with id " + req.params.threadId
@@ -102,7 +102,7 @@ exports.update = function (req, res) {
 
 exports.delete = function (req, res) {
     // Delete a thread with the specified threadId in the request
-    console.log('deleting', req.params.threadId);
+    //console.log('deleting', req.params.threadId);
     Thread.deleteOne({_id: req.params.threadId}, function (err, data) {
         //console.log(data.result.n);  // number actually removed
 

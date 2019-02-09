@@ -60,7 +60,7 @@ exports.findOne = function (req, res) {
 
     //MyModel.find({ name: 'john', age: { $gte: 18 }});
 
-    console.log('FindOne ', req.params.metadataId);
+    //console.log('FindOne ', req.params.metadataId);
     Metadata.find({objId: req.params.metadataId}, function (err, metadata) {
 
         //console.log();
@@ -76,7 +76,7 @@ exports.findOne = function (req, res) {
 
 exports.findMatch = function (req, res) {
     // Find a single metadata with a metadataId
-    console.log('FindMatch ', req.params.metadataId);
+    //console.log('FindMatch ', req.params.metadataId);
     Metadata.find({objId: req.params.objId}, function (err, metadata) {
 
         //console.log();
@@ -85,7 +85,7 @@ exports.findMatch = function (req, res) {
                 message: "Could not retrieve metadata with id " + req.params.metadataId
             });
         } else {
-            console.log(metadata)
+            //console.log(metadata)
             res.send(metadata);
         }
     });
@@ -130,6 +130,7 @@ exports.delete = function (req, res) {
         } else {
             //console.log(data)
             if (data.ok) {
+                //console.log(data, data.ok)
                 res.status(200).send({
                     message: "metadata deleted successfully!"
                 })

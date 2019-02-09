@@ -100,7 +100,7 @@ exports.update = function (req, res) {
 
 exports.delete = function (req, res) {
     // Delete a triple with the specified tripleId in the request
-    //console.log('deleting', req.params.tripleId);
+    // console.log('deleting', req.params.tripleId);
     Triple.deleteOne({_id:req.params.tripleId}, function (err, data) {
         //console.log(data.result.n);  // number actually removed
 

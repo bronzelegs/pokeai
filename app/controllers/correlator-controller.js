@@ -60,9 +60,9 @@ exports.findAll = function (req, res) {
 
 exports.findOne = function (req, res) {
     // Find a single correlator with a correlatorId
-    //console.log(req.params.correlatorId);
+    // console.log(req.params.correlatorId);
     Correlator.findById(req.params.correlatorId, function (err, correlator) {
-        console.log();
+        //console.log();
         if (err || !correlator) {
             res.status(500).send({
                 message: "Could not retrieve correlator with id " + req.params.correlatorId

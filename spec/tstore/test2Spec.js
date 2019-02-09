@@ -59,13 +59,31 @@ describe("create", function() {
     });
   });
 
+  describe("GET /triples {}", function() {
+    let json = "{ subj: 'changed'}";
+    it("returns status code 200", function(done) {
+      request({
+        url: base_url  + "/",
+        method: 'GET',
+        data: JSON.stringify(json)
+      }, function(error, response, body) {
+        console.log("GET", JSON.parse(body));
+        expect(response.statusCode).toBe(200);
+        done();
+      });
+    });
+  });
+
   describe("tstore DELETE /triples id", function() {
     it("returns status code 200", function(done) {
       request({
         url: base_url + '/' + createdId,
         method: 'DELETE'
       }, function(error, response, body) {
-        console.log(error, body);
+        if (error) {
+          console.log("error", error);
+        }
+        console.log(body);
         expect(response.statusCode).toBe(200);
         done();
       });
